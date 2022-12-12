@@ -34,6 +34,7 @@ def predict(model, transform, image, class_labels):
       output = model(image_tensor)
 
   # Select the class with the higherst probability
+
   class_id = torch.argmax(output).item()
   class_name = class_labels[class_id]
   return class_name
